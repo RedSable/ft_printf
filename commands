@@ -1,0 +1,1 @@
+gcc -lft -L./libft -I./libft/includes ft_printf.c fill_flags_struct.c ft_gets_1.c ft_gets_2.c
