@@ -25,12 +25,14 @@ int		main()
 {
 	// char	*op = "kek";
 	// char	*po;
+	unsigned long		one = 1;
+	char	two = '2';
 
 	// po = op;
 	// check("kek", 'a');
 	// printf("%c\n%d\n%d\n%d\n%d\n", 'q',1,1,1,1,1,1,1,1);
-	printf("%u\n", -255);
-	printf("%u\n", 0 - 255);
+	printf("%d\n", sizeof(one));
+	printf("%d\n", sizeof((void *)two));
 	// printf("0x7ffe%x\n", &po);
 	return (0);
 }

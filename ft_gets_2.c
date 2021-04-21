@@ -6,9 +6,15 @@
 /*   By: aapricot <aapricot@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/14 20:42:45 by aapricot          #+#    #+#             */
-/*   Updated: 2021/04/20 23:13:31 by aapricot         ###   ########.fr       */
+/*   Updated: 2021/04/21 21:15:39 by aapricot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/*
+**	Can change numbers print into print_base using string:
+**	"0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ_#"
+**	Would be better, but not so fun and interesting as using bits. (^ W ^ *)
+*/
 
 #include "ft_printf.h"
 
@@ -36,6 +42,10 @@ void	get_u(va_list args, t_parsed_flags flags)
 	free(p);
 }
 
+/*
+**	Maybe combine little "x" and big "X"
+*/
+
 void	get_x(va_list args, t_parsed_flags flags)
 {
 	int				i;
@@ -44,7 +54,7 @@ void	get_x(va_list args, t_parsed_flags flags)
 	int				check;
 
 	i = 0;
-	v = va_arg(args, unsigned long);
+	v = va_arg(args, unsigned int);		//use different types with different modifyers(l, ll...)
 	check = 0;
 	w = 0;
 	while (i++ < 16)

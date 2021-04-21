@@ -6,7 +6,7 @@
 /*   By: aapricot <aapricot@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/09 17:33:19 by aapricot          #+#    #+#             */
-/*   Updated: 2021/04/20 23:09:39 by aapricot         ###   ########.fr       */
+/*   Updated: 2021/04/21 20:46:17 by aapricot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,7 +98,7 @@ int		main()
 	char	*po;
 
 	po = op;
-	ft_printf("%s %c %x\n%p\n", "Hello", 'q', UINT64_MAX - 2, &po);
-	printf("%s %c %x\n%p", "Hello", 'q', UINT64_MAX - 2, &po);
+	ft_printf("%s %c %o\n%p\n", "Hello", 'q', UINT64_MAX, &po);
+	printf("%s %c %llo\n%p", "Hello", 'q', UINT64_MAX, &po);
 	return(0);
 }
